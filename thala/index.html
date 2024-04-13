@@ -66,11 +66,12 @@ const videoAdder=(check)=>{
 console.log(myTotal);
 let check=true
     if(myTotal%7===0){
-        p1.innerHTML="<h1>You Got It!!!! THALA for Reason</h1>"
+        p1.innerHTML="<h1>You Got It!!!!</h1><h1> THALA for Reason.</h1>"
+        p1.style.color='green'
         check=true
     }else{
-        p1.innerHTML="<h3>Try Another Word</h3>"
-        p1.style.color='green'
+        p1.innerHTML="<h2>You Got the Reel Dhoni :(</h2><h3>Try Another Word</h3>"
+        p1.style.color='red'
         check=false
     }
     videoAdder(check)
@@ -79,8 +80,16 @@ let check=true
     
     p.classList.add('button')
         p.innerHTML=`<h2 id="newGame">Try Again</h2>`
-        p.style.border="solid red"
-        p.style.color="red"
+        if(!check){
+
+            p.style.border="solid red"
+            p.style.color="red"
+        }
+        else{
+            p.style.border="solid green"
+            p.style.color="green"
+
+        }
         ok.appendChild(p)
         newGame()
 
