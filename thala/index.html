@@ -45,7 +45,7 @@
     // console.log(input)
     str.addEventListener('click',(e)=>{
         e.preventDefault()
-        const strToAdd=(new TextEncoder().encode(input.value))
+        const strToAdd=(new TextEncoder().encode(input.value.toLowerCase()))
         
         const myTotal=strToAdd.reduce((acc,currval)=>{
             currval-=96;
